@@ -33,10 +33,10 @@ class _WhoAreYouState extends State<WhoAreYou> {
 
     return AnnotatedRegion(
       value: SystemUiOverlayStyle(
-        statusBarIconBrightness: isDarkMode ? Brightness.light : Brightness.dark,
+        statusBarIconBrightness: Brightness.dark,
         systemNavigationBarColor: themeData.scaffoldBackgroundColor,
         statusBarColor: Colors.transparent,
-        systemNavigationBarIconBrightness: isDarkMode ? Brightness.light : Brightness.dark,
+        systemNavigationBarIconBrightness: Brightness.dark,
       ),
       child: Scaffold(
         resizeToAvoidBottomInset: false,
@@ -54,7 +54,7 @@ class _WhoAreYouState extends State<WhoAreYou> {
 
                   SizedBox(
                     width: width * 0.9,
-                    child: CustomText("A Personalized experience, \nJust for you", fontSize: 24, fontWeight: FontWeight.bold),
+                    child: CustomText("A Personalized experience, \nJust for you", color: Colors.black, fontSize: 24, fontWeight: FontWeight.bold),
                   ),
                 ],
               ),
@@ -70,14 +70,14 @@ class _WhoAreYouState extends State<WhoAreYou> {
                       constraints: BoxConstraints(minHeight: height < 700 ? 270 : 281, maxHeight: height < 700 ? 270 : 360,),
                       clipBehavior: Clip.hardEdge,
                       decoration: BoxDecoration(
-                        border: Border.fromBorderSide(BorderSide(color: isDarkMode ? Color(0x9EA2A2A2) : TechStarsColors.lighterPink)),
-                        color: isDarkMode ? Color(0xFF655A5A) : TechStarsColors.lightestPink,
+                        border: Border.fromBorderSide(BorderSide(color: TechStarsColors.altLightGray)),
+                        color: TechStarsColors.lighterTeal,
                         borderRadius: BorderRadius.only(topLeft: Radius.circular(24), topRight: Radius.circular(24)),
                       ),
                       child: Column(
                         mainAxisSize: MainAxisSize.min,
                         children: [
-                          SizedBox(height: 18, child: CustomText("Select an Option.", fontWeight: FontWeight.w600, )),
+                          SizedBox(height: 18, child: CustomText("Select an Option.", fontWeight: FontWeight.w600, color: Colors.black, )),
                           const SizedBox(height: 20),
                           Expanded(
                             child: ListView(
@@ -125,6 +125,7 @@ class _WhoAreYouState extends State<WhoAreYou> {
                   child: CustomElevatedButton(
                     label: "Continue",
                     textSize: 16,
+                    textColor: Colors.white,
                     pixelHeight: 48,
                     backgroundColor: themeData.primaryColorDark,
                     onClick: () {
@@ -178,13 +179,12 @@ class SelectAnOptionListTile extends StatelessWidget {
         child: CustomElevatedButton(
           contentPadding: EdgeInsets.zero,
           borderRadius: 0,
-          overlayColor: TechStarsColors.lighterPink,
+          overlayColor: TechStarsColors.lightTeal,
           onClick: () {},
           // Color(0xFF655A5A)
           backgroundColor:
               isSelected
-                  ? (isDarkMode ? TechStarsColors.primary : TechStarsColors.lighterPink)
-                  : (isDarkMode ? Color(0xFFFFF6F6) : Color(0xFFE0D5D5)),
+                  ? TechStarsColors.primary : Color(0xFFACD3D3),
           child: ListTile(
             leading: CircleAvatar(radius: 18, backgroundImage: AssetImage(leadingImageAsset)),
             title: Padding(
@@ -193,7 +193,7 @@ class SelectAnOptionListTile extends StatelessWidget {
                 title,
                 fontSize: 16,
                 fontWeight: FontWeight.w500,
-                color: isDarkMode ? (isSelected ? Colors.white : Colors.black) : Colors.black,
+                color: isSelected ? Colors.white : Colors.black,
               ),
             ),
             subtitle:
@@ -205,13 +205,13 @@ class SelectAnOptionListTile extends StatelessWidget {
                         subtitle!,
                         fontSize: 11,
                         fontWeight: FontWeight.w500,
-                        color: isDarkMode ? (isSelected ? Colors.white : Colors.black) : Colors.black,
+                        color: isSelected ? Colors.white : Colors.black,
                       ),
                     ),
             trailing: CircleAvatar(
               radius: 16.5,
-              backgroundColor: TechStarsColors.lightGray,
-              child: Icon(Iconsax.tick_circle, size: 32, color: isSelected ? TechStarsColors.primary : Colors.white),
+              backgroundColor: TechStarsColors.lighterTeal,
+              child: Icon(Iconsax.tick_circle, size: 32, color: isSelected ? TechStarsColors.primary : TechStarsColors.altLightGray),
             ),
             contentPadding: const EdgeInsets.only(left: 24, top: 2, bottom: 2, right: 12),
             onTap: () {

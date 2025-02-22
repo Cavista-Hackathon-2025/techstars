@@ -3,6 +3,7 @@ import 'package:custom_widgets_toolkit/custom_widgets_toolkit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:hive_flutter/adapters.dart';
 import 'package:iconsax_flutter/iconsax_flutter.dart';
 import 'package:techstars_hackathon/common/colors.dart';
 import 'package:techstars_hackathon/common/widgets/timestamped_chat_message.dart';
@@ -15,7 +16,7 @@ class HomeScreen extends StatefulWidget {
   State<HomeScreen> createState() => _HomeScreenState();
 }
 
-class _HomeScreenState extends State<HomeScreen> with AutomaticKeepAliveClientMixin{
+class _HomeScreenState extends State<HomeScreen> with AutomaticKeepAliveClientMixin {
   @override
   Widget build(BuildContext context) {
     super.build(context);
@@ -31,12 +32,12 @@ class _HomeScreenState extends State<HomeScreen> with AutomaticKeepAliveClientMi
 
           Container(
             width: width,
-            height: 160,
-            padding: EdgeInsets.symmetric(horizontal: 12, vertical: 16),
+            height: 210,
+            padding: EdgeInsets.symmetric(horizontal: 14, vertical: 14),
             margin: EdgeInsets.symmetric(vertical: 24, horizontal: 24),
             decoration: BoxDecoration(
-              border: Border.fromBorderSide(BorderSide(color: TechStarsColors.lighterPink)),
-              color: TechStarsColors.lightestPink,
+              border: Border.fromBorderSide(BorderSide(color: TechStarsColors.lightTeal.withAlpha(80))),
+              color: TechStarsColors.lighterTeal,
               borderRadius: BorderRadius.circular(24),
             ),
 
@@ -45,7 +46,7 @@ class _HomeScreenState extends State<HomeScreen> with AutomaticKeepAliveClientMi
               children: [
                 SizedBox(
                   width: width * 0.8,
-                  child: CustomText("Good evening, User", fontSize: 22, fontWeight: FontWeight.bold, color: TechStarsColors.primary),
+                  child: CustomText("Good morning, Kemi", fontSize: 22, fontWeight: FontWeight.bold, color: TechStarsColors.primary),
                 ),
 
                 Padding(
@@ -55,27 +56,19 @@ class _HomeScreenState extends State<HomeScreen> with AutomaticKeepAliveClientMi
                     child: TimestampedChatMessage(
                       expandWidth: true,
                       textSpan: TextSpan(
-                        text:
-                            "It's been 6 weeks, your body is starting to change! "
-                            "You might feel more tired."
-                            "Remember to Drink plenty of water and eat well.",
+                        text: "It’s been three weeks. Remember to sleep more and drink lots of water. ",
 
-                        style: CustomText(
-                          "",
-                          fontSize: 15,
-                          color: Color(0x80363636),
-                          fontStyle: FontStyle.italic,
-                        ).effectiveStyle(context),
+                        style: CustomText("", fontSize: 15, color: Color(0xFF1E1E1E), fontStyle: FontStyle.italic).effectiveStyle(context),
                       ),
                       sentAt: Padding(
-                        padding: const EdgeInsets.only(top: 12),
+                        padding: const EdgeInsets.only(top: 4),
                         child: IconButton(
                           style: ButtonStyle(
                             shape: WidgetStatePropertyAll(CircleBorder()),
                             side: WidgetStatePropertyAll(BorderSide(color: TechStarsColors.lightGray)),
                             backgroundColor: WidgetStatePropertyAll(Colors.white),
                           ),
-                          icon: SvgPicture.asset("assets/svgs/ai_sparkle.svg", width: 32, height: 32),
+                          icon: SvgPicture.asset("assets/svgs/ai_sparkle.svg", width: 32, height: 32,),
                           onPressed: () {},
                         ),
                       ),
@@ -83,6 +76,36 @@ class _HomeScreenState extends State<HomeScreen> with AutomaticKeepAliveClientMi
                     ),
                   ),
                 ),
+
+                const SizedBox(height: 4.0,),
+
+                Container(
+                  
+                  padding: EdgeInsets.symmetric(horizontal: 12),
+                  decoration: BoxDecoration(
+                    color: TechStarsColors.background,
+                    border: Border.fromBorderSide(BorderSide(color: TechStarsColors.lightGray)),
+                    borderRadius: BorderRadius.circular(16)
+                  ),
+                  height: 48,
+                  child: Row(
+                    children: [
+                      Expanded(child: CustomText("Pending appointments", fontSize: 16, fontWeight: FontWeight.w600, color: Colors.black,)),
+                      
+                      Row(
+                        children: [
+                          CircleAvatar(radius: 10, backgroundColor: Colors.redAccent, child: CustomText("4", color: Colors.white,),),
+                          const SizedBox(width: 4,),
+                          Icon(Iconsax.arrow_right_3_copy, color: Colors.black,),
+
+
+                        ],
+                      )
+                      
+
+                    ],
+                  ),
+                )
               ],
             ),
           ),
@@ -134,9 +157,7 @@ class _HomeScreenState extends State<HomeScreen> with AutomaticKeepAliveClientMi
                   ),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: [
-                      buildQuickAccessIcon("Check out some quick health tips", Iconsax.health),
-                    ],
+                    children: [buildQuickAccessIcon("Check out some quick health tips", Iconsax.health)],
                   ),
                 ),
               ],
@@ -156,12 +177,16 @@ class _HomeScreenState extends State<HomeScreen> with AutomaticKeepAliveClientMi
           IconButton(
             padding: EdgeInsets.zero,
             style: ButtonStyle(backgroundColor: WidgetStatePropertyAll(TechStarsColors.lightGray)),
-            icon: Icon(Iconsax.profile_circle, size: 48, color: themeData.primaryColorDark,),
+            icon: Icon(Iconsax.profile_circle, size: 48, color: TechStarsColors.altPrimary),
             onPressed: () {},
           ),
           Padding(
             padding: const EdgeInsets.only(right: 4.0),
-            child: IconButton(onPressed: () {}, icon: Icon(Iconsax.notification, size: 28, color: themeData.brightness == Brightness.dark ? Colors.white : themeData.primaryColor)),
+            child: IconButton(
+              style: ButtonStyle(backgroundColor: WidgetStatePropertyAll(TechStarsColors.lighterTeal)),
+              onPressed: () {},
+              icon: Icon(Iconsax.notification, size: 28, color: TechStarsColors.altPrimary),
+            ),
           ),
         ],
       ),
@@ -236,9 +261,3 @@ class GradientStrokeText extends StatelessWidget {
     );
   }
 }
-
-
-
-
-
-

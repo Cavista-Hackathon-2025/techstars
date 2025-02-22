@@ -22,10 +22,10 @@ class Themes {
     brightness: Brightness.dark,
     primaryColor: TechStarsColors.primaryDark,
     primaryColorDark: TechStarsColors.primary,
-    scaffoldBackgroundColor: TechStarsColors.darkBackground,
+    scaffoldBackgroundColor: TechStarsColors.background,
     fontFamily: "AlbertSans",
     appBarTheme: const AppBarTheme(
-      backgroundColor: TechStarsColors.darkBackground,
+      backgroundColor: TechStarsColors.background,
       foregroundColor: Colors.white10,
       elevation: 0,
     ),

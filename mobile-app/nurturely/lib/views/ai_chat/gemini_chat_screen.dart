@@ -121,7 +121,7 @@ class _GeminiChatScreenState extends State<GeminiChatScreen> with AutomaticKeepA
                              onClick: () => Navigator.of(context).pop(),
                            ),
                            CustomTextButton(
-                             backgroundColor: TechStarsColors.lighterPink,
+                             backgroundColor: TechStarsColors.lightTeal,
                              label: "Delete",
                              onClick: () async{
                                Navigator.of(context).pop();
@@ -150,7 +150,7 @@ class _GeminiChatScreenState extends State<GeminiChatScreen> with AutomaticKeepA
                   return Chat(
                     textMessageBuilder: (textMessage, {messageWidth = 10, showName = true}) {
                       return Container(
-                        color: textMessage.author.role == types.Role.user ? TechStarsColors.lighterPink : TechStarsColors.lightGray,
+                        color: textMessage.author.role == types.Role.user ? TechStarsColors.lightTeal : TechStarsColors.lightGray,
                         padding: EdgeInsets.symmetric(horizontal: 12, vertical: 12),
                         child: MarkdownBody(
                           data: textMessage.text,

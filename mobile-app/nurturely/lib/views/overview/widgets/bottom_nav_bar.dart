@@ -30,7 +30,7 @@ class BottomNavBar extends StatelessWidget {
         selectedIndex == index,
         navBarItems[index]["iconCopy"],
         navBarItems[index]["icon"],
-        primaryColorDark,
+        selectedIndex == index ? TechStarsColors.altPrimary.withAlpha(200) : TechStarsColors.primary,
         onTap: () => onTap(index),
       );
     });
@@ -82,7 +82,7 @@ class BottomNavBar extends StatelessWidget {
               child: DecoratedBox(
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
-                  gradient: RadialGradient(colors: [TechStarsColors.primary, TechStarsColors.lighterPink], stops: [0.75, 1.0]),
+                  gradient: RadialGradient(colors: [TechStarsColors.primary, TechStarsColors.lightTeal], stops: [0.75, 1.0]),
                 ),
                 child: ClipOval(
                   child: Padding(

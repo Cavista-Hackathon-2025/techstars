@@ -60,10 +60,10 @@ class HowMuchInfo extends StatelessWidget {
                           keyboardType: TextInputType.number,
                           textAlign: TextAlign.center,
                           inputTextStyle: TextStyle(fontSize: 50, fontWeight: FontWeight.w600, color: Colors.black),
-                          backgroundColor: TechStarsColors.lightestPink,
+                          backgroundColor: TechStarsColors.lighterTeal,
                           focusedBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(24),
-                            borderSide: BorderSide(color: TechStarsColors.lightPink),
+                            borderSide: BorderSide(color: TechStarsColors.altLightGray),
                           ),
                           cursorColor: TechStarsColors.primary,
                           selectionColor: TechStarsColors.primary.withAlpha(100),
@@ -71,7 +71,7 @@ class HowMuchInfo extends StatelessWidget {
 
                           enabledBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(24),
-                            borderSide: BorderSide(color: TechStarsColors.lighterPink),
+                            borderSide: BorderSide(color: TechStarsColors.lightTeal),
                           ),
                         ),
                         const SizedBox(width: 12),
@@ -90,8 +90,8 @@ class HowMuchInfo extends StatelessWidget {
                         width: 288,
                         padding: EdgeInsets.symmetric(horizontal: 12.0),
                         decoration: BoxDecoration(
-                          color: TechStarsColors.lightestPink,
-                          border: Border.fromBorderSide(BorderSide(color: TechStarsColors.lightGray)),
+                          color: TechStarsColors.lighterTeal,
+                          border: Border.fromBorderSide(BorderSide(color: TechStarsColors.altLightGray)),
                           borderRadius: BorderRadius.only(
                             topLeft: Radius.circular(36),
                             topRight: Radius.circular(36),
@@ -102,7 +102,7 @@ class HowMuchInfo extends StatelessWidget {
                           spacing: 12,
                           children: [
                             Icon(Iconsax.calendar_edit_copy, color: TechStarsColors.darkBlue,),
-                            Expanded(child: CustomText("Week", color: Colors.black, fontSize: 14, fontWeight: FontWeight.w600,)),
+                            Expanded(child: CustomText("Week(s)", color: Colors.black, fontSize: 14, fontWeight: FontWeight.w600,)),
 
                             Icon(Iconsax.arrow_down_1_copy, color: TechStarsColors.darkBlue)
 
