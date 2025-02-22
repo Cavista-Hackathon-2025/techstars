@@ -98,7 +98,8 @@ const CommunityPage = () => {
   };
 
   return (
-    <div className={styles.container}>
+    <div className={styles.containerBody}>
+ <div className={styles.container}>
       <h2 className={styles.header}>Community Feed</h2>
       <div className={styles.newPost}>
         <div className={styles.compose}>
@@ -148,6 +149,8 @@ const CommunityPage = () => {
       </div>
       <button onClick={() => changePage("dashboard")} className={styles.backButton}>Back to Dashboard</button>
     </div>
+    </div>
+   
   );
 };
 

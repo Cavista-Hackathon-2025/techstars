@@ -1,11 +1,6 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
 
-body {
-  background-color: #1B2A34; /* Dark greenish background */
+.containerBody {
+  background-color: #f3f3f3; /* Dark greenish background */
   color: #ffffff; /* White text for better visibility */
  
 }
@@ -17,11 +12,11 @@ body {
   padding: 20px;
 }
 
-.header {
+/* .header {
   font-size: 2rem;
   font-weight: bold;
   margin-bottom: 20px;
-  color: #FF6B81; /* Pinkish header */
+  color: #FF6B81; 
 }
 .postContent{
   color: white;
@@ -30,30 +25,13 @@ body {
   margin-bottom: 20px;
 }
 
-.compose {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  
-}
 
-.input, .textarea {
-  width: 100%;
-  padding: 12px;
-  font-size: 16px;
-  border-radius: 8px;
-  border: 1px solid #555;
-  background-color: #233D45; /* Dark teal-green background */
-  color: #ffffffbe;
-  outline: none;
-}
 
-.textarea {
-  min-height: 80px;
-}
+
+
 
 .postButton {
-  background-color: #FF6B81; /* Pinkish button */
+  background-color: #FF6B81; 
   color: white;
   padding: 10px;
   border: none;
@@ -63,32 +41,18 @@ body {
 }
 
 .postButton:hover {
-  background-color: #FF4B64; /* Darker pink on hover */
+  background-color: #FF4B64; 
 }
 
-.posts {
-  margin-top: 40px;
-}
 
-.postCard {
-  background-color: #1F2A35; /* Slightly lighter dark teal-green */
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
-  padding: 20px;
-  margin-bottom: 20px;
-}
 
-.postHeader h3 {
-  font-size: 1.25rem;
-  font-weight: bold;
-  margin-bottom: 5px;
-  color: #FF6B81; /* Pinkish title */
-  text-overflow: inherit;
-}
+
+
+
 
 .postContent {
   font-size: 16px;
-  color: #ffffff; /* Light text color for visibility */
+  color: #ffffff; 
   margin-bottom: 15px;
 }
 
@@ -100,28 +64,16 @@ body {
   margin-top: 15px;
 }
 
-.actions {
-  display: flex;
-  gap: 10px;
-  margin-top: 15px;
-}
 
-.actionButton {
-  background: none;
-  border: none;
-  color: #FF6B81; /* Pinkish text */
-  cursor: pointer;
-  font-size: 14px;
-}
 
 .actionButton:hover {
   text-decoration: underline;
-  color: #FF4B64; /* Darker pink on hover */
+  color: #FF4B64; 
 }
 
 .comment {
   font-size: 14px;
-  color: #f2f7fc; /* Light grayish color for comments */
+  color: #f2f7fc; 
 }
 
 .noComments {
@@ -130,7 +82,7 @@ body {
 }
 
 .backButton {
-  background-color: #64C7A5; /* Tilt-green button */
+  background-color: #64C7A5; 
   color: white;
   padding: 12px;
   border: none;
@@ -140,9 +92,80 @@ body {
 }
 
 .backButton:hover {
-  background-color: #4CB28C; /* Darker green on hover */
+  background-color: #4CB28C; 
 }
 
 .postCard img{
   width: 50%;
+} */
+
+.input, .textarea {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #aeffff;
+  background-color: #008080; 
+  color: #ffffffbe;
+  outline: none;
+}
+.input::placeholder{
+  color: #fff;
+}
+.textarea::placeholder{
+  color: #fff;
+}
+
+
+.textarea {
+  min-height: 80px;
+}
+
+.posts {
+  margin-top: 40px;
+}
+
+.postCard {
+  background-color: #3c5064;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+.postCard p{
+  max-width: 100%;
+  color: #d7eded;
+ 
+}
+.postImage{
+  width: 100%;
+  object-fit: cover;
+  height: 300px;
+}
+
+.compose {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  
+}
+.actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.actionButton {
+  background: none;
+  border: none;
+  color: #FF6B81; 
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.postHeader h3 {
+  font-size: 1.5rem;
+  
+  text-overflow: inherit;
 }

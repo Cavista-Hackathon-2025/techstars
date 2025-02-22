@@ -1,8 +1,8 @@
-/* Container Styling */
+/* 
 .container {
     font-family: 'Poppins', sans-serif;
     padding: 30px;
-    background-color: #EDEDED; /* Light grey background */
+    background-color: #EDEDED; 
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
     animation: fadeIn 1s ease-in-out;
@@ -10,7 +10,7 @@
     margin: auto;
   }
   
-  /* Fade-in animation */
+ 
   @keyframes fadeIn {
     from {
       opacity: 0;
@@ -22,7 +22,7 @@
     }
   }
   
-  /* Header Section */
+  
   .headerdiv{
     display: flex;
     justify-content: center;
@@ -40,7 +40,7 @@
   .greeting {
     font-size: 2.4rem;
     font-weight: 700;
-    color: #F5002B; /* Main red color from Figma */
+    color: #008080; 
     margin-bottom: 15px;
   }
   
@@ -58,17 +58,17 @@
     margin-top: 5px;
   }
   
-  /* Grid Layout for Action Cards */
+  
   .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
     gap: 25px;
     margin-bottom: 40px;
   }
   
-  /* Card Styling */
+  
   .card {
-    background-color: #FFFFFF; /* White background for cards */
+    background-color: #FFFFFF; 
     border-radius: 15px;
     padding: 25px;
     display: flex;
@@ -81,8 +81,8 @@
   }
   
   .card:hover {
-    transform: translateY(-10px); /* Lift effect on hover */
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15); /* Enhanced shadow for hover */
+    transform: translateY(-10px); 
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
   }
   
   .cardText {
@@ -94,12 +94,12 @@
   }
   
   .icon {
-    font-size: 3rem; /* Larger icon for better visibility */
+    font-size: 3rem; 
     margin-bottom: 15px;
-    color: #FF5573; /* Light pink from Figma */
+    color: #FF5573;
   }
   
-  /* AI Section Styling */
+  
   .aiSection {
     background-color: #FFFFFF;
     padding: 30px;
@@ -129,16 +129,16 @@
   }
   
   .supplyItem::before {
-    content: "🔧"; /* Clear icon before list items */
+    content: "🔧"; 
     margin-right: 10px;
   }
   
-  /* Button Styling */
+ 
   button {
     padding: 15px 25px;
     border: none;
     border-radius: 25px;
-    background: #F5002B; /* Primary button color */
+    background: #F5002B; 
     color: white;
     font-size: 1.1rem;
     font-weight: 600;
@@ -152,15 +152,14 @@
   }
   
   button:hover {
-    background: #FF5573; /* Light pink hover */
-    transform: translateY(-3px); /* Button hover lift effect */
+    background: #FF5573; 
+    transform: translateY(-3px); 
   }
   
   button:active {
     transform: translateY(2px);
   }
-  
-  /* Responsive Text Alignment */
+ 
   @media (max-width: 768px) {
     .container {
       padding: 20px;
@@ -179,12 +178,11 @@
     }
   }
   
-  /* Minor Adjustments for Clean Aesthetic */
+
   body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
-    background-color: #F4F6F9; /* Light background color for entire page */
-  }
+    background-color: #F4F6F9; 
   
   h1, h2, h3, h4 {
     margin: 0;
@@ -195,4 +193,80 @@
     padding-left: 20px;
     margin: 0;
   }
-  
+   */
+
+   .container{
+    display: flex;
+    gap: 2em;
+    padding: 2em;
+   }
+   .header{
+    background-color: #D7EDED ;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    padding: 1em;
+   }
+   .greeting{
+    color: #003838;
+    margin-bottom: 1em;
+    max-width: 100%;
+    text-align: start;
+   }
+   .info{
+    color: #1E1E1E;
+    
+    max-width: 100%;
+
+   }
+   .pendswrapper{
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    font-weight: bold;
+    border: 2px solid lightyellow;
+    background-color: #fff;
+    border-radius: 10px;
+    color: black;
+    align-items: center;
+   }
+   .pendswrapper span{
+     background-color: orangered;
+     padding: .5em;
+     border-radius: 20%;
+   }
+
+   .gridWrapper{
+    margin-top: 2em;
+   }
+   .gridWrapper h4{
+    font-weight: 600;
+    margin-bottom: .8em;
+   }
+   .grid{
+background-color: #BDD0CC;
+border-radius: 5px;
+border: 1px solid lightblue;
+padding: 2em;
+display: grid;
+grid-template-columns: 1fr 1fr ;
+gap: 1em;
+   }
+   .card{
+background-color: #fff;
+padding: 2em;
+font-size: 1.3rem;
+border-radius: 10%;
+color: black;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+   }
+   .card:hover{
+    background-color: #D7EDED;
+    color: #003838;
+   }
+
+   .aiSectionContainer header{
+margin-bottom: 2em;
+   }

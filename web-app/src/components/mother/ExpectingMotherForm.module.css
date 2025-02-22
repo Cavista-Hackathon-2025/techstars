@@ -18,7 +18,7 @@
   .title {
     font-size: 1.5rem;
     font-weight: bold;
-    color: #ff6584;
+    color: #008080;
     margin-bottom: 15px;
   }
   
@@ -52,13 +52,13 @@
   
   .inputGroup select:focus, 
   .inputGroup input:focus {
-    border-color: #ff6584;
+    border-color: #008080;
     outline: none;
   }
   
   .tip {
     background: #ffe9ec;
-    color: #ff4d6d;
+    color: #008080;
     font-size: 0.9rem;
     padding: 10px;
     border-radius: 8px;
@@ -69,7 +69,7 @@
   .button {
     margin-top: 10px;
     padding: 12px;
-    background: #ff6584;
+    background: #008080;
     color: white;
     font-size: 1.1rem;
     font-weight: bold;
@@ -80,6 +80,6 @@
   }
   
   .button:hover {
-    background: #e74c66;
+    background: #d7dede
   }
   

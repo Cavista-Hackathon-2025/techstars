@@ -2,6 +2,8 @@ import React, { useState, useEffect,useContext } from 'react';
 import { getRecommendedDoctor, getAvailableSlots, getAppointmentVideoResources } from '../utils/aiServices';
 import styles from './Appointments.module.css';
 import PageContext from "../page/PageContext";
+import { RoundVerified } from '../../assets/Ui/Verify';
+import { MenuAlt1 } from '../../assets/Ui/Menu';
 
 const AppointmentScheduler = () => {
     const ctx = useContext(PageContext);
@@ -55,6 +57,7 @@ const AppointmentScheduler = () => {
 
   return (
     <div className={styles.container}>
+       <div className={styles.firstWrapper}>
       <h2>Schedule Your Appointment</h2>
       {doctor && (
         <div className={styles.doctorInfo}>
@@ -73,7 +76,7 @@ const AppointmentScheduler = () => {
               <p>Date: {formatDate(appointment.date)}</p>
               <p>Status: {appointment.status}</p>
               {appointment.status === 'pending' && (
-                <button onClick={() => handleBookAppointment(appointment.date)}>
+                <button onClick={() => handleBookAppointment(appointment.date)} className={styles.btn}>
                   Book Now
                 </button>
               )}
@@ -104,6 +107,29 @@ const AppointmentScheduler = () => {
       )}
       <button onClick={()=> changePage("dashboard")}>Back </button>
     </div>
+      <div className={styles.secondWrapper}>
+        <header>
+          <span>{"<"}</span>
+          <p><span>Dr Aniwe</span> <RoundVerified/></p>
+          <span> <MenuAlt1/></span>
+         
+        </header>
+        <hr/>
+        <div className={styles.wrap}>
+        <div className={styles.firstwrap}>
+          <p>Your appointment is scheduled for the 12th of Mrch. 
+Location: Medical Health Center
+Requirements....
+Other infos.......</p>
+ <span>Automated</span>
+        </div>
+        <div className={styles.thank}>Thank You</div>
+        </div>
+
+      
+      </div>
+    </div>
+   
   );
 };
 

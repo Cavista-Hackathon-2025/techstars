@@ -45,77 +45,91 @@ const Dashboard = () => {
   }, []);
 
   return (
-    <div className={styles.container}>
-      <header className={styles.header}>
-        <h2 className={styles.greeting}>{greeting} 💖</h2>
-        <div className={styles.headerdiv}>
-        <p className={styles.info}>
-          You're in your <strong>{user.trimester}</strong>, Week <strong>{user.week}</strong>.
-          Your due date is <span className={styles.dueDate}>{new Date(user.dueDate).toLocaleDateString()}</span>. 🌸
-        </p>
+<div className={styles.container}>
+<div> 
+    <header className={styles.header}>
+      <h2 className={styles.greeting}>{greeting} 💖</h2>
+      <div className={styles.headerdiv}>
+      <p className={styles.info}>
+        You're in your <strong>{user.trimester}</strong>, Week <strong>{user.week}</strong>.
+        Your due date is <span className={styles.dueDate}>{new Date(user.dueDate).toLocaleDateString()}</span>. 🌸
+      </p>
+      </div>
+
+      <div className={styles.pendswrapper} >
+        <p>Pending appointments</p>
+        <div>
+
+        <span>4</span>
+        <span>{">"}</span>
         </div>
-        
-      </header>
-
-      <div className={styles.grid}>
-        <button className={styles.card} onClick={() => changePage('appointment')}>
-          <span className={styles.icon}><IconCalender/></span>
-          <span className={styles.cardText}>Schedule Appointments</span>
-        </button>
-        <button className={styles.card} onClick={() => changePage('community')}>
-          <span className={styles.icon}><PeopleCommunity16Filled/></span>
-          <span className={styles.cardText}>Join the Mama Community</span>
-        </button>
-
-        <button className={styles.card} onClick={() => changePage('chatbot')}>
-          <span className={styles.icon}><ChatbubbleEllipses/></span>
-          <span className={styles.cardText}>Nuturely Ai assitant</span>
-        </button>
-        <button className={styles.card} onClick={() => changePage('savings')}>
-          <span className={styles.icon}><MoneyBag/></span>
-          <span className={styles.cardText}>Nurturely Vest</span>
-        </button>
-        {/* <button className={styles.card} onClick={() => changePage('tracker')}>
-          <span className={styles.icon}>📊</span>
-          <span className={styles.cardText}>Track Your Pregnancy Progress</span>
-        </button> */}
-        <button className={styles.card} onClick={() => changePage('babyproducts')}>
-          <span className={styles.icon}><TwotoneProductionQuantityLimits/></span>
-          <span className={styles.cardText}>Shop Baby Essentials</span>
-        </button>
-        <button className={styles.card} onClick={() => changePage('medremind')}>
-          <span className={styles.icon}><Reminder/></span>
-          <span className={styles.cardText}>Medication Reminder</span>
-        </button>
+      </div>
       
-      </div>
+    </header>
+<div className={styles.gridWrapper}> <h4>Quick Acess</h4> <div className={styles.grid}>
+      <button className={styles.card} onClick={() => changePage('appointment')}>
+        <span className={styles.icon}><IconCalender/></span>
+        <span className={styles.cardText}>Schedule Appointments</span>
+      </button>
+      <button className={styles.card} onClick={() => changePage('community')}>
+        <span className={styles.icon}><PeopleCommunity16Filled/></span>
+        <span className={styles.cardText}>Join the Mama Community</span>
+      </button>
 
-      <div className={styles.aiSection}>
-        <h3 className={styles.aiTitle}>✨ This Week’s Milestone</h3>
-        <p>{milestone}</p>
-      </div>
+      <button className={styles.card} onClick={() => changePage('chatbot')}>
+        <span className={styles.icon}><ChatbubbleEllipses/></span>
+        <span className={styles.cardText}>Nuturely Ai assitant</span>
+      </button>
+      <button className={styles.card} onClick={() => changePage('savings')}>
+        <span className={styles.icon}><MoneyBag/></span>
+        <span className={styles.cardText}>Nurturely Vest</span>
+      </button>
+      
+      <button className={styles.card} onClick={() => changePage('babyproducts')}>
+        <span className={styles.icon}><TwotoneProductionQuantityLimits/></span>
+        <span className={styles.cardText}>Shop Baby Essentials</span>
+      </button>
+      <button className={styles.card} onClick={() => changePage('medremind')}>
+        <span className={styles.icon}><Reminder/></span>
+        <span className={styles.cardText}>Medication Reminder</span>
+      </button>
+    
+    </div></div>
+  
+</div>
 
-      <div className={styles.aiSection}>
-        <h3 className={styles.aiTitle}>💡 Health Tip for You</h3>
-        <p>{healthTip}</p>
-      </div>
-
-      <div className={styles.aiSection}>
-        <h3 className={styles.aiTitle}>🛍️ Baby Supplies</h3>
-        <ul className={styles.supplyList}>
-          {babySupplies.map((item, index) => (
-            <li key={index} className={styles.supplyItem}>
-              {item}
-            </li>
-          ))}
-        </ul>
-      </div>
-
-      <div className={styles.aiSection}>
-        <h3 className={styles.aiTitle}>🛒 Shopping Recommendation</h3>
-        <p>{shoppingRecommendation}</p>
-      </div>
+    <div className={styles.aiSectionContainer}>
+    <header className={styles.header}> <h2>Health Tips, Milestone and Baby Supplies😉, For you Kemi</h2> </header>
+     
+    <div className={styles.aiSection}>
+      <h3 className={styles.aiTitle}>✨ This Week’s Milestone</h3>
+      <p>{milestone}</p>
     </div>
+
+    <div className={styles.aiSection}>
+      <h3 className={styles.aiTitle}>💡 Health Tip for You</h3>
+      <p>{healthTip}</p>
+    </div>
+
+    <div className={styles.aiSection}>
+      <h3 className={styles.aiTitle}>🛍️ Baby Supplies</h3>
+      <ul className={styles.supplyList}>
+        {babySupplies.map((item, index) => (
+          <li key={index} className={styles.supplyItem}>
+            {item}
+          </li>
+        ))}
+      </ul>
+    </div>
+
+    <div className={styles.aiSection}>
+      <h3 className={styles.aiTitle}>🛒 Shopping Recommendation</h3>
+      <p>{shoppingRecommendation}</p>
+    </div>
+    </div>
+</div>
+   
+   
   );
 };
 
