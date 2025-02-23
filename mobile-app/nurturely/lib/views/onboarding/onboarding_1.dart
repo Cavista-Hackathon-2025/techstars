@@ -25,6 +25,7 @@ class Onboarding1 extends StatelessWidget {
         systemNavigationBarIconBrightness: Brightness.dark,
       ),
       child: Scaffold(
+        resizeToAvoidBottomInset: false,
         body: SizedBox(
           height: height,
           child: Column(

@@ -12,7 +12,7 @@ import 'package:techstars_hackathon/common/colors.dart';
 import 'package:techstars_hackathon/views/ai_chat/gemini_chat_screen.dart';
 import 'package:techstars_hackathon/views/overview/pages/community_screen.dart';
 import 'package:techstars_hackathon/views/overview/pages/home_screen.dart';
-import 'package:techstars_hackathon/views/overview/pages/menu_screen.dart';
+import 'package:techstars_hackathon/views/overview/pages/savings_box.dart';
 import 'package:techstars_hackathon/views/overview/pages/settings_screen.dart';
 import 'package:techstars_hackathon/views/overview/widgets/bottom_nav_bar.dart';
 
@@ -28,17 +28,13 @@ class _MainScreenState extends State<MainScreen> with AutomaticKeepAliveClientMi
   final PageController _pageController = PageController(initialPage: 0);
   final List<Map<String, dynamic>> navBarItems = [
     {"selected": false, "iconCopy": Iconsax.home_1_copy, "icon": Iconsax.home_1},
-    {"selected": false, "iconCopy": Iconsax.menu_copy, "icon": Iconsax.menu},
+    {"selected": false, "iconCopy": Iconsax.wallet_1_copy, "icon": Iconsax.wallet_1_copy},
     {"selected": false, "iconCopy": Iconsax.people_copy, "icon": Iconsax.people},
     {"selected": false, "iconCopy": Iconsax.setting_copy, "icon": Iconsax.setting},
   ];
-  final List<Widget> pages = [HomeScreen(), MenuScreen(), CommunityScreen(), SettingsScreen()];
+  final List<Widget> pages = [HomeScreen(), SavingsBox(), CommunityScreen(), SettingsScreen()];
   final Widget geminiChatScreen = const GeminiChatScreen();
 
-  @override
-  void initState() {
-    super.initState();
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -52,10 +48,10 @@ class _MainScreenState extends State<MainScreen> with AutomaticKeepAliveClientMi
       canPop: false,
       child: AnnotatedRegion(
         value: SystemUiOverlayStyle(
-          statusBarIconBrightness: isDarkMode ? Brightness.light : Brightness.dark,
+          statusBarIconBrightness: Brightness.dark,
           systemNavigationBarColor: themeData.scaffoldBackgroundColor,
           statusBarColor: Colors.transparent,
-          systemNavigationBarIconBrightness: isDarkMode ? Brightness.light : Brightness.dark,
+          systemNavigationBarIconBrightness: Brightness.dark,
         ),
         child: Scaffold(
           resizeToAvoidBottomInset: false,

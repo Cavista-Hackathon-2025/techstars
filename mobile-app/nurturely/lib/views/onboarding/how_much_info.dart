@@ -5,6 +5,7 @@ import 'package:flutter/services.dart';
 import 'package:iconsax_flutter/iconsax_flutter.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:techstars_hackathon/common/colors.dart';
+import 'package:techstars_hackathon/views/onboarding/onboarding_3.dart';
 import 'package:techstars_hackathon/views/overview/pages/home_screen.dart';
 import 'package:techstars_hackathon/views/overview/main_screen.dart';
 
@@ -21,10 +22,10 @@ class HowMuchInfo extends StatelessWidget {
 
     return AnnotatedRegion(
       value: SystemUiOverlayStyle(
-        statusBarIconBrightness: isDarkMode ? Brightness.light : Brightness.dark,
+        statusBarIconBrightness: Brightness.dark,
         systemNavigationBarColor: themeData.scaffoldBackgroundColor,
         statusBarColor: Colors.transparent,
-        systemNavigationBarIconBrightness: isDarkMode ? Brightness.light : Brightness.dark,
+        systemNavigationBarIconBrightness:Brightness.dark,
       ),
       child: Scaffold(
         resizeToAvoidBottomInset: false,
@@ -34,11 +35,11 @@ class HowMuchInfo extends StatelessWidget {
             children: [
               const SizedBox(height: kToolbarHeight),
 
-              CustomText("Knowing you..", fontSize: 14, fontWeight: FontWeight.w600),
+              CustomText("Knowing you..", fontSize: 14, fontWeight: FontWeight.w600, color: TechStarsColors.primary,),
 
               const SizedBox(height: 48),
 
-              SizedBox(width: width * 0.8, child: CustomText(defaultText, fontSize: 26, fontWeight: FontWeight.bold)),
+              SizedBox(width: width * 0.8, child: CustomText(defaultText, fontSize: 26, fontWeight: FontWeight.bold, color: Colors.black,)),
 
               const SizedBox(height: 48),
 
@@ -121,6 +122,7 @@ class HowMuchInfo extends StatelessWidget {
                 child: Padding(
                   padding: const EdgeInsets.only(bottom: 12),
                   child: CustomElevatedButton(
+                    textColor: Colors.white,
                     label: "Continue",
                     textSize: 16,
                     pixelHeight: 48,
@@ -128,8 +130,8 @@ class HowMuchInfo extends StatelessWidget {
                     onClick: () {
 
                       context.pushReplacementTransition(
-                        type: PageTransitionType.fade,
-                        child: MainScreen(),
+                        type: PageTransitionType.rightToLeftWithFade,
+                        child: Onboarding3(),
                         duration: Durations.extralong1,
                         curve: CustomCurves.defaultIosSpring,
                       );

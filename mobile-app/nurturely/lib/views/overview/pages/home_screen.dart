@@ -5,9 +5,13 @@ import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:hive_flutter/adapters.dart';
 import 'package:iconsax_flutter/iconsax_flutter.dart';
+import 'package:page_transition/page_transition.dart';
 import 'package:techstars_hackathon/common/colors.dart';
 import 'package:techstars_hackathon/common/widgets/timestamped_chat_message.dart';
+import 'package:techstars_hackathon/views/overview/sub_pages/appointments.dart';
 import 'dart:math' as math;
+
+import 'package:techstars_hackathon/views/overview/sub_pages/notifications.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -79,31 +83,36 @@ class _HomeScreenState extends State<HomeScreen> with AutomaticKeepAliveClientMi
 
                 const SizedBox(height: 4.0,),
 
-                Container(
-                  
-                  padding: EdgeInsets.symmetric(horizontal: 12),
-                  decoration: BoxDecoration(
-                    color: TechStarsColors.background,
-                    border: Border.fromBorderSide(BorderSide(color: TechStarsColors.lightGray)),
-                    borderRadius: BorderRadius.circular(16)
-                  ),
-                  height: 48,
-                  child: Row(
-                    children: [
-                      Expanded(child: CustomText("Pending appointments", fontSize: 16, fontWeight: FontWeight.w600, color: Colors.black,)),
-                      
-                      Row(
-                        children: [
-                          CircleAvatar(radius: 10, backgroundColor: Colors.redAccent, child: CustomText("4", color: Colors.white,),),
-                          const SizedBox(width: 4,),
-                          Icon(Iconsax.arrow_right_3_copy, color: Colors.black,),
+                GestureDetector(
+                  onTap: (){
+                    context.pushTransition(type: PageTransitionType.rightToLeftWithFade, child: Appointments());
+                  },
+                  child: Container(
+
+                    padding: EdgeInsets.symmetric(horizontal: 12),
+                    decoration: BoxDecoration(
+                      color: TechStarsColors.background,
+                      border: Border.fromBorderSide(BorderSide(color: TechStarsColors.lightGray)),
+                      borderRadius: BorderRadius.circular(16)
+                    ),
+                    height: 48,
+                    child: Row(
+                      children: [
+                        Expanded(child: CustomText("Pending appointments", fontSize: 16, fontWeight: FontWeight.w600, color: Colors.black,)),
+
+                        Row(
+                          children: [
+                            CircleAvatar(radius: 10, backgroundColor: Colors.redAccent, child: CustomText("4", color: Colors.white,),),
+                            const SizedBox(width: 4,),
+                            Icon(Iconsax.arrow_right_3_copy, color: Colors.black,),
 
 
-                        ],
-                      )
-                      
+                          ],
+                        )
 
-                    ],
+
+                      ],
+                    ),
                   ),
                 )
               ],
@@ -115,7 +124,7 @@ class _HomeScreenState extends State<HomeScreen> with AutomaticKeepAliveClientMi
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                CustomText("Quick Access"),
+                CustomText("Quick Access", color: Colors.black,),
                 Container(
                   width: width,
                   height: 140,
@@ -144,7 +153,7 @@ class _HomeScreenState extends State<HomeScreen> with AutomaticKeepAliveClientMi
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                CustomText("Health Tips"),
+                CustomText("Health Tips", color: Colors.black,),
                 Container(
                   width: width,
                   height: 140,
@@ -184,7 +193,9 @@ class _HomeScreenState extends State<HomeScreen> with AutomaticKeepAliveClientMi
             padding: const EdgeInsets.only(right: 4.0),
             child: IconButton(
               style: ButtonStyle(backgroundColor: WidgetStatePropertyAll(TechStarsColors.lighterTeal)),
-              onPressed: () {},
+              onPressed: () {
+                context.pushTransition(type: PageTransitionType.topToBottom, child: Notifications());
+              },
               icon: Icon(Iconsax.notification, size: 28, color: TechStarsColors.altPrimary),
             ),
           ),

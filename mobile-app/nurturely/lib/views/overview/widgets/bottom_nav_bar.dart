@@ -7,6 +7,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:techstars_hackathon/common/colors.dart';
 import 'package:techstars_hackathon/views/ai_chat/gemini_chat_screen.dart';
+import 'package:techstars_hackathon/views/ai_chat/gemini_chat_view.dart';
 
 class BottomNavBar extends StatelessWidget {
   final int selectedIndex;
@@ -70,30 +71,38 @@ class BottomNavBar extends StatelessWidget {
           left: 0,
           right: 0,
           bottom: 32 + 2,
-          child: GestureDetector(
-            behavior: HitTestBehavior.opaque,
-            onTapDown: (event) {
-              log("Tap down:");
-            },
-            onTap: () {
-              Navigator.of(context).push(PageTransition(type: PageTransitionType.bottomToTop, child: GeminiChatScreen()));
-            },
-            child: Center(
-              child: DecoratedBox(
-                decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  gradient: RadialGradient(colors: [TechStarsColors.primary, TechStarsColors.lightTeal], stops: [0.75, 1.0]),
-                ),
-                child: ClipOval(
-                  child: Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 8, vertical: 8),
-                    child: SizedBox.square(
-                      dimension: 44,
-                      child: SvgPicture.asset(
-                        "assets/svgs/ai_sparkle.svg",
-                        width: 40,
-                        height: 40,
-                        colorFilter: ColorFilter.mode(Colors.white, BlendMode.srcIn),
+          child: Center(
+            child: GestureDetector(
+              behavior: HitTestBehavior.opaque,
+              onTapDown: (event) {
+                log("Tap down:");
+              },
+              onTap: () {
+                Navigator.of(context).push(
+                  PageTransition(
+                    type: PageTransitionType.bottomToTop,
+                    child: GeminiChatScreen(),
+                    // child: GeminiChatView()
+                  ),
+                );
+              },
+              child: Center(
+                child: DecoratedBox(
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    gradient: RadialGradient(colors: [TechStarsColors.primary, TechStarsColors.lightTeal], stops: [0.75, 1.0]),
+                  ),
+                  child: ClipOval(
+                    child: Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 8, vertical: 8),
+                      child: SizedBox.square(
+                        dimension: 44,
+                        child: SvgPicture.asset(
+                          "assets/svgs/ai_sparkle.svg",
+                          width: 40,
+                          height: 40,
+                          colorFilter: ColorFilter.mode(Colors.white, BlendMode.srcIn),
+                        ),
                       ),
                     ),
                   ),

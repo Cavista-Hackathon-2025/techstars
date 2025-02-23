@@ -27,6 +27,8 @@ dependencies:
   flutter_animate: ^4.5.2
   animated_text_kit: ^4.2.3
   flutter_svg: ^2.0.17
+  uuid: ^4.5.1
+  chatview: ^2.4.0
 
 dev_dependencies:
   flutter_test:

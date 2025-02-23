@@ -48,7 +48,7 @@ class _WhoAreYouState extends State<WhoAreYou> {
                 children: [
                   const SizedBox(height: kToolbarHeight),
 
-                  CustomText("Getting Started", fontSize: 14, fontWeight: FontWeight.w600),
+                  CustomText("Getting Started", fontSize: 14, fontWeight: FontWeight.w600, color: TechStarsColors.primary,),
 
                   const SizedBox(height: 48),
 

@@ -2,6 +2,7 @@ import 'package:custom_widgets_toolkit/custom_widgets_toolkit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:page_transition/page_transition.dart';
+import 'package:techstars_hackathon/views/onboarding/who_are_you.dart';
 
 import '../../common/colors.dart';
 import 'onboarding_3.dart';
@@ -26,6 +27,7 @@ class Onboarding2 extends StatelessWidget {
         systemNavigationBarIconBrightness: Brightness.dark,
       ),
       child: Scaffold(
+        resizeToAvoidBottomInset: false,
         body: SizedBox(
           height: height,
           child: Column(
@@ -63,7 +65,7 @@ class Onboarding2 extends StatelessWidget {
                       Navigator.of(context).push(
                         PageTransition(
                           type: PageTransitionType.rightToLeftWithFade,
-                          child: Onboarding3(),
+                          child: WhoAreYou(),
                           duration: Durations.extralong1,
                           curve: CustomCurves.defaultIosSpring,
                         ),
