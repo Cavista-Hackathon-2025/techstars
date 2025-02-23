@@ -24,7 +24,7 @@ const Dashboard = () => {
     name: "Kemi",
     trimester: "1st Trimester",
     week: 4,
-    dueDate: "2025-04-10",
+    dueDate: "2025-11-10",
     healthStatus: "healthy", // Simulating health input (healthy, moderate, tired)
   };
 
@@ -52,7 +52,7 @@ const Dashboard = () => {
       <div className={styles.headerdiv}>
       <p className={styles.info}>
         You're in your <strong>{user.trimester}</strong>, Week <strong>{user.week}</strong>.
-        Your due date is <span className={styles.dueDate}>{new Date(user.dueDate).toLocaleDateString()}</span>. 🌸
+        Your due date is <span className={styles.dueDate}>{new Date(user.dueDate).toLocaleDateString('en-GB', { day: '2-digit', month: 'long', year: 'numeric' })}</span>. 🌸
       </p>
       </div>
 

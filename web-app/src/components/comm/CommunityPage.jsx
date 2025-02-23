@@ -7,6 +7,8 @@ import preg1 from '../../assets/images/preg1.jpg'
 import preg2 from '../../assets/images/preg2.jpg'
 import preg3 from '../../assets/images/preg3.jpg'
 import preg4 from '../../assets/images/preg4.jpg'
+import preg6 from '../../assets/images/preg6.jpg'
+import preg8 from '../../assets/images/preg9.jpg'
 import { Like } from '../../assets/Ui/Like';
 import { Comments } from '../../assets/Ui/Comment';
 import { ArrowRetweetFill16 } from '../../assets/Ui/Retweet';
@@ -137,13 +139,13 @@ const CommunityPage = () => {
           <h3>Interests</h3>
           <div className={styles.interestWrapper2}>
             <div><img src={preg3} alt="" /> <h4>Weight Journey</h4></div>
-            <div><img src={preg4} alt="" /> <h4>Postpartum Care</h4></div>
-            <div><img src={preg2} alt="" /> <h4>Maternal Care</h4></div>
+            <div><img src={preg8} alt="" /> <h4>Postpartum Care</h4></div>
+            <div><img src={preg6} alt="" /> <h4>Maternal Care</h4></div>
             <div><img src={preg1} alt="" /> <h4>Birth Preparation</h4></div>
           </div>
         </div>
 
-        <h3>Tweets</h3>
+        <h3>Posts</h3>
         <div className={styles.posts}>
           {posts.map((post) => (
             <div key={post.id} className={styles.postCard}>

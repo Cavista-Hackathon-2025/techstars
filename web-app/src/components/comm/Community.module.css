@@ -210,7 +210,7 @@ border-radius: 10px;
 }
 .interestWrapper2 img{
   border-radius: 10px;
-  width: 60%;
+  width: 70%;
 }
 .posts{
   display: flex;
@@ -231,7 +231,8 @@ border-radius: 10px;
 
 .postCard{
   color: #EDEDED;
-  border-radius: 0%;
+  border-radius: 10%;
+  cursor: pointer;
 }
 .postCard img{
   width: 100%;
@@ -251,4 +252,14 @@ border-radius: 10px;
   color: #FF6B81; 
   cursor: pointer;
   font-size: 14px;
+}
+
+.container button{
+  background-color: #003838;
+  color: #fff;
+}
+.container button:hover{
+  background-color: #fff;
+  color: #003838;
+  border: 1px solid #003838;
 }

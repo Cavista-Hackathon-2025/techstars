@@ -100,7 +100,7 @@ function EmergencyFund() {
       {/* Start auto-saving once the card is linked */}
       {isCardLinked && simulateSaving()}
 
-      <button type="submit" onClick={() => changePage("dashboard")}>Next ➜</button>
+      <button type="submit" onClick={() => changePage("dashboard")}>Back ➜</button>
     </div>
   );
 }

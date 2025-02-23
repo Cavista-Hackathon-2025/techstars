@@ -110,14 +110,14 @@ const AppointmentScheduler = () => {
       <div className={styles.secondWrapper}>
         <header>
           <span>{"<"}</span>
-          <p><span>nurturlyassistnt</span> </p>
+          <p><span>nurturely assistant</span> </p>
           <span> <MenuAlt1/></span>
          
         </header>
         <hr/>
         <div className={styles.wrap}>
         <div className={styles.firstwrap}>
-          <p>Your appointment is scheduled for the 12th of Mrch. 
+          <p>Your appointment is scheduled for the 12th of March. 
 Location: Medical Health Center
 Requirements....
 Other infos.......</p>

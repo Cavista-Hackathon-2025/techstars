@@ -1,6 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState ,useContext} from 'react';
 import './PortfolioData.css'
+import PageContext from "../page/PageContext";
 function Portfolio() {
+  const ctx = useContext(PageContext);
+  const { changePage } = ctx;
   const [portfolioData, setPortfolioData] = useState({
     totalSavings: 250000,
     investments: 150000,
@@ -38,6 +41,7 @@ function Portfolio() {
           })}
         </div>
       </div>
+      <button onClick={() => changePage('dashboard')}>Back</button>
     </div>
   );
 }

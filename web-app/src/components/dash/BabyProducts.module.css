@@ -8,7 +8,7 @@
   .title {
     font-size: 2rem;
     font-weight: bold;
-    color: #ff6f61;
+    color: #008080;
   }
   
   .subtitle {
@@ -62,11 +62,14 @@
   .productPrice {
     font-size: 1.2rem;
     font-weight: bold;
-    color: #ff6f61;
+    color: #008080;
+  }
+  .title{
+    max-width: 100%;
   }
   
   .addToCartButton {
-    background-color: #ff6f61;
+    background-color: #008080;
     color: white;
     padding: 10px;
     border: none;
@@ -77,6 +80,6 @@
   }
   
   .addToCartButton:hover {
-    background-color: #e65a50;
+    background-color: #d7eded;
   }
   

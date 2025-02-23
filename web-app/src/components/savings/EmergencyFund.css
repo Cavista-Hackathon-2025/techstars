@@ -11,7 +11,7 @@
 .emergency-fund-heading {
   font-size: 24px;
   text-align: center;
-  color: #FF7043;
+  color: #008080;
 }
 
 .welcome-message {
@@ -35,7 +35,7 @@
 }
 
 .link-card-button {
-  background-color: #FF7043;
+  background-color: #008080;
   color: white;
   border: none;
   padding: 10px 20px;
@@ -46,7 +46,7 @@
 }
 
 .link-card-button:hover {
-  background-color: #FF5722;
+  background-color: #008080;
 }
 
 .card-linked-message {
@@ -70,7 +70,8 @@
 
 .total-savings p {
   font-size: 18px;
-  color: #FF7043;
+  color: #008080;
+  max-width: 100%;
 }
 
 .savings-plans {
@@ -100,13 +101,13 @@
 }
 
 .progress-bar-filled {
-  background-color: #FF7043;
+  background-color: #008080;
   height: 100%;
   width: 0;
 }
 
 button {
-  background-color: #FF7043;
+  background-color: #008080;
   color: white;
   padding: 10px 15px;
   border: none;
@@ -118,7 +119,7 @@ button {
 }
 
 button:hover {
-  background-color: #FF5722;
+  background-color: #008080;
 }
 
 .portfolio {
