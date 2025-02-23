@@ -67,6 +67,15 @@ const Dashboard = () => {
       
     </header>
 <div className={styles.gridWrapper}> <h4>Quick Acess</h4> <div className={styles.grid}>
+<button className={styles.card} onClick={() => changePage('chatbot')}>
+        <span className={styles.icon}><ChatbubbleEllipses/></span>
+        <span className={styles.cardText}>Nuturely Ai assitant</span>
+      </button>
+      <button className={styles.card} onClick={() => changePage('savings')}>
+        <span className={styles.icon}><MoneyBag/></span>
+        <span className={styles.cardText}>Nurturely Vest</span>
+      </button>
+      
       <button className={styles.card} onClick={() => changePage('appointment')}>
         <span className={styles.icon}><IconCalender/></span>
         <span className={styles.cardText}>Schedule Appointments</span>
@@ -76,14 +85,6 @@ const Dashboard = () => {
         <span className={styles.cardText}>Join the Mama Community</span>
       </button>
 
-      <button className={styles.card} onClick={() => changePage('chatbot')}>
-        <span className={styles.icon}><ChatbubbleEllipses/></span>
-        <span className={styles.cardText}>Nuturely Ai assitant</span>
-      </button>
-      <button className={styles.card} onClick={() => changePage('savings')}>
-        <span className={styles.icon}><MoneyBag/></span>
-        <span className={styles.cardText}>Nurturely Vest</span>
-      </button>
       
       <button className={styles.card} onClick={() => changePage('babyproducts')}>
         <span className={styles.icon}><TwotoneProductionQuantityLimits/></span>

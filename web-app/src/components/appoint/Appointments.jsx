@@ -61,7 +61,7 @@ const AppointmentScheduler = () => {
       <h2>Schedule Your Appointment</h2>
       {doctor && (
         <div className={styles.doctorInfo}>
-          <h3>Doctor: {doctor.name}</h3>
+          <h3>Doctor: {doctor.name} <span><RoundVerified/></span></h3>
           <p>Specialty: {doctor.specialty}</p>
         </div>
       )}
@@ -110,7 +110,7 @@ const AppointmentScheduler = () => {
       <div className={styles.secondWrapper}>
         <header>
           <span>{"<"}</span>
-          <p><span>Dr Aniwe</span> <RoundVerified/></p>
+          <p><span>nurturlyassistnt</span> </p>
           <span> <MenuAlt1/></span>
          
         </header>
